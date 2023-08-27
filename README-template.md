@@ -30,8 +30,9 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot](./images/my-answer-mobile(375px).png)
-![screenshot](./images/my-answer-desktop(1440px).png)
+![mobile](https://github.com/indy-stack/summaryComponent/assets/74520336/76dfb682-f833-41f0-9f69-dc3c17a01f38)
+![desktop](https://github.com/indy-stack/summaryComponent/assets/74520336/6adec657-21a6-40c2-9e87-a64d544e28cb)
+
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
