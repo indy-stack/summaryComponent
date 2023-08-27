@@ -47,6 +47,11 @@ body{
     padding: 20px;
 }
 
+.wrapper {
+    width: 100%;
+    height: auto;
+}
+
 .score {
     margin: 20px auto;
     height: 130px;
@@ -190,7 +195,7 @@ img {
     text-align: center;
     position: fixed;
     bottom: 10px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,6 +204,15 @@ img {
   .attribution a {
     color: hsl(228, 45%, 44%);
   }
+
+
+@media screen and (min-width: 620px) and (max-width: 1439px){
+    .wrapper{
+        max-width: 70%;
+        height: 80%;
+    }
+
+}
 
 @media screen and (min-width: 1440px) {
     body {
@@ -249,6 +263,15 @@ img {
         border-radius: 30px;
         padding: 30px;
         height: 100%;
+    }
+
+    @media screen and (min-width: 1441px) {
+        .wrapper{
+            height: auto;
+        };
+        .summary {
+            height: 500px;
+        }
     }
 
 }
