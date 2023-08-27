@@ -1,86 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,900&family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;0,900;1,400;1,900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@100;300;400;500;900&family=Sen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,900&family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;0,900;1,400;1,900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@100;300;400;500;900&family=Sen:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Results summary component</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <section id="result" class="result">
-    <h3 class="header">Your Result</h3>
-    <div class="score">
-      <h2 class="score-number">76 <span class="of-100">of 100</span></h2> 
-      
-    </div>
-    <h1 class="result-display">Great</h1>
-    <p class="result-text">You scored higher than 65% of the people who have taken these tests. </p>
-  </section>
-  <section class="summary" id="summary">
+  <div id="wrapper" class="wrapper">
+    <section id="result" class="result">
+      <h3 class="header">Your Result</h3>
+      <div class="score">
+        <h2 class="score-number">76 <span class="of-100">of 100</span></h2>
+
+      </div>
+      <h1 class="result-display">Great</h1>
+      <p class="result-text">You scored higher than 65% of the people who have taken these tests. </p>
+    </section>
+    <section class="summary" id="summary">
       <h1>Summary</h1>
       <div id="info-container" class="info-container"></div>
-        
-  </section>
-  <button id="btn" class="btn" >Continue</button>
-  
-  <!--Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue 
-  
+      <button id="btn" class="btn">Continue</button>
+    </section>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Indira Fraga</a>.
+    Challenge by &nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>. 
+    Coded by &nbsp;<a href="https://www.frontendmentor.io/profile/indy-stack"> Indira Fraga</a>.
   </div>
--->
-<script>
-  let infoContainer = document.getElementById("info-container");
+  </div>
+  
+  <script>
+    let infoContainer = document.getElementById("info-container");
 
-  fetch("data.json")
-  .then(response => response.json())
-  .then (jsonData => {
-    jsonData.forEach(entry => {
-      let div = document.createElement("div");
-      div.className = "summary-item";
-      div.id = "summary-" + (entry.category).toLowerCase();
+    fetch("data.json")
+      .then(response => response.json())
+      .then(jsonData => {
+        jsonData.forEach(entry => {
+          let div = document.createElement("div");
+          div.className = "summary-item";
+          div.id = "summary-" + (entry.category).toLowerCase();
 
-      let iconEl = document.createElement("img");
-      iconEl.src = entry.icon;
-      iconEl.alt = "Icon for " + entry.category;
+          let iconEl = document.createElement("img");
+          iconEl.src = entry.icon;
+          iconEl.alt = "Icon for " + entry.category;
 
-      let categoryEl = document.createElement("p");
-      categoryEl.className = "summary-category";
-      categoryEl.id = (entry.category).toLowerCase();
-      categoryEl.textContent = entry.category;
+          let categoryEl = document.createElement("p");
+          categoryEl.className = "summary-category";
+          categoryEl.id = (entry.category).toLowerCase();
+          categoryEl.textContent = entry.category;
 
-      let scoreEl = document.createElement("p");
-      scoreEl.className = "category-score";
-      scoreEl.innerHTML = entry.score + `<span class="summary-100">/100</span>`;
+          let scoreEl = document.createElement("p");
+          scoreEl.className = "category-score";
+          scoreEl.innerHTML = entry.score + `<span class="summary-100">/100</span>`;
 
-      div.appendChild(iconEl);
-      div.appendChild(categoryEl);
-      div.appendChild(scoreEl);
+          div.appendChild(iconEl);
+          div.appendChild(categoryEl);
+          div.appendChild(scoreEl);
 
-     infoContainer.appendChild(div);
-    });
-  })
-  .catch(error => console.log("Error fetching data", error));
+          infoContainer.appendChild(div);
+        });
+      })
+      .catch(error => console.log("Error fetching data", error));
 
-</script>
+  </script>
 </body>
+
 </html>
