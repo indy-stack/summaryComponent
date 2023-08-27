@@ -29,9 +29,9 @@ Users should be able to:
 - **Bonus**: Use the local JSON data to dynamically populate the content
 
 ### Screenshot
-#mobile
+# mobile
 ![mobile](https://github.com/indy-stack/summaryComponent/assets/74520336/76dfb682-f833-41f0-9f69-dc3c17a01f38)
-#desktop
+# desktop
 ![desktop](https://github.com/indy-stack/summaryComponent/assets/74520336/6adec657-21a6-40c2-9e87-a64d544e28cb)
 
 
