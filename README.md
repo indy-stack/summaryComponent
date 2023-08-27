@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 **note: Please note my solutions are optimized for mobile(375px) and desktop(1440px) and anything in between was not accounted for therefore it
 might not display correctly now. I'll eventually add media queries for full responsiveness.**
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/summary-component-zq2j7uTLlW)
 - Live Site URL: [live site](https://indy-stack.github.io/summaryComponent/)
 
 ## My process
