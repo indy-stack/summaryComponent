@@ -51,7 +51,7 @@ might not display correctly now. I'll eventually add media queries for full resp
 
 ### What I learned
 
-While working through this project the main focus was to practice aligning elements on the page and planning out before time in order to make the design resposive like using flexbog to change the layout of the component according to screen size.
+While working through this project the main focus was to practice aligning elements on the page and planning out before time in order to make the design resposive like using flexbox to change the layout of the component according to screen size.
 
 
 ### Continued development
